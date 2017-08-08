@@ -6,10 +6,8 @@ func ArrayPairSum(nums []int) int {
 	sort.Ints(nums)
 
 	sum := 0
-	for i := 0; i < len(nums); i++ {
-		if i%2 == 0 {
-			sum += nums[i]
-		}
+	for i := 0; i < len(nums); i += 2 {
+		sum += nums[i]
 	}
 
 	return sum
